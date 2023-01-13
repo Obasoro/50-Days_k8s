@@ -1,0 +1,13 @@
+FROM alpine AS build
+WORKDIR /opt/facebooc
+COPY . .
+RUN apk add --update alpine-sdk sqlite-dev sqlite && make
+RUN make all
+FROM alpine AS run 
+WORKDIR /opt/facebooc
+COPY --from=build /opt/facebooc/bin .
+COPY --from=build /opt/facebooc/static ./static
+COPY --from=build /opt/facebooc/templates ./templates 
+RUN apk add --updat --no-cache sqlite-lib 
+EXPOSE 16000
+CMD /bin/facebooc

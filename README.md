@@ -20,12 +20,12 @@ docker exec -it {conatiner_ID} bash
 
 docker diff {}
 
-docker image history docker_id/tag name
+`docker image history docker_id/tag name`
 
 
-docker image push docker_repo/tag:version
+`docker image push docker_repo/tag:version`
 
-docker image build -t repo_iD/tag_name:version
+`docker image build -t repo_iD/tag_name:version`
 
 # Steps in creating an application
 
@@ -41,7 +41,7 @@ docker image ls
 
 ## check failed image from the last position
 
-docker image run -it --rm container_IDr
+`docker image run -it --rm container_IDr`
 
 ###
 Does not fall within any known computing language
@@ -65,16 +65,16 @@ when building docker images--- docker build -f Dockerfile.ms -t (name of tag)
 
 also/
 
-docker build -t obasoro/new . --target=test
+`docker build -t obasoro/new . --target=test`
 
 docker-compose mostly use for development, for production you use kubernetes
 
-docker run -idt -p 3306:3306 \
+`docker run -idt -p 3306:3306 \
     -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
     -e MYSQL_USER_=petclinic \
     -e MYSQL_PASSWORD=petclinic \
     -e MYSQL_DATABASE=petclinic \
-    mysql:5.7
+    mysql:5.7`
 
 docker run -idt -p 8080:8080 -e SPRING_PROFILE_ACTIVE=mysql <docker_id_name>/
 
@@ -90,10 +90,10 @@ dockerfile is build configuration, while docker-copose is launch configuration
 
 Integrate Dockefile and Docker-compose
 
-docker-compose build 
+`docker-compose build 
 docker run -idt -p 8080:8080 \
     -e SPRING_PROFILES_ACTIVE=mysql \
-    --link <cobtainer_id>:db 
+    --link <cobtainer_id>:db`
 
 ## Git error
 

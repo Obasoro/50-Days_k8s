@@ -1,0 +1,6 @@
+[submodule "Day1/vote"]
+	path = Day1/vote
+	url = https://github.com/Obasoro/50-Days_k8s.git
+[submodule "Day3/spring-petclinic"]
+	path = Day3/spring-petclinic
+	url = https://github.com/Obasoro/50-Days_k8s.git

@@ -95,3 +95,14 @@ docker run -idt -p 8080:8080 \
     -e SPRING_PROFILES_ACTIVE=mysql \
     --link <cobtainer_id>:db 
 
+## Git error
+
+It had pushed for over an hour but could not see the display because an error was always occurring on the terminal.
+
+`git rebase --abort`
+`git push -f origin main` was enough
+
+[dev.io](https://dev.to/tham/how-to-migrate-master-branch-to-main-in-github-48aj)
+
+
+Used git rebase --abort
